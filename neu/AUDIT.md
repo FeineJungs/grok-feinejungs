@@ -16,11 +16,11 @@ Die neue Seite teilt oben in drei Wege: **Für Firmen**, **Privat** und **Premiu
 
 ### 2. Der Held verspricht Stimmung, zeigt aber vor allem das Fahrzeug
 
-Das große Foto ist die Ape vor einer Fassade, ohne Gäste und ohne Glas in der Hand. Der Satz im Kopf wiederholt sich in Navigation, Karten und Fuß. Die Meta-Beschreibung spricht von Bier, Champagner, Austern, Spätzle und Maultaschen; die Seite selbst verkauft vor allem Schaumwein, Champagner, Austern und das Wagyu-Tasting. AGB nennen zusätzlich Spätzle und Maultaschen. Kunden wissen nicht, ob sie eine Getränkebar, eine Küche oder eine Agentur buchen.
+Das große Foto ist die Ape vor einer Fassade, ohne Gäste und ohne Glas in der Hand. Der Satz im Kopf wiederholt sich in Navigation, Karten und Fuß. Die Meta-Beschreibung versprach eine Küche mit Gerichten, die nicht im Angebot sind. Die sichtbare Seite verkauft Schaumwein, Champagner, Austern und das Wagyu-Tasting. Kunden wissen nicht, ob sie eine Getränkebar oder eine Agentur buchen.
 
 Unklare Ware erzeugt die Frage „Ist das überhaupt für uns?“ und senkt die Klickrate auf „Anfragen“.
 
-Die neue Seite sagt einen Satz: Bar, Team und Ausschank kommen zum Fest im Großraum Stuttgart. Das Hero-Foto ist ein echtes Abend-Event mit Gästen. Küche und Agentur werden nicht behauptet. Spätzle und Maultaschen tauchen nicht auf, solange sie auf der sichtbaren Seite kein Angebot sind.
+Die neue Seite sagt einen Satz: Bar, Team und Ausschank kommen zum Fest im Großraum Stuttgart. Das Hero-Foto ist ein echtes Abend-Event mit Gästen. Eine Küche und die Agentur werden nicht behauptet.
 
 ### 3. Preise stehen da, aber der nächste Schritt ist ein langes Formular
 

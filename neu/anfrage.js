@@ -25,7 +25,7 @@
         var show = key === "alle" || card.getAttribute("data-audience") === key;
         card.hidden = !show;
       });
-      var target = document.getElementById("pakete");
+      var target = document.getElementById("karte");
       if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
@@ -229,4 +229,16 @@
   });
 
   showStep(1);
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("reveal");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll(".weg, .menu li, .gang, .stimme").forEach(function (el) { io.observe(el); });
+  }
 })();
