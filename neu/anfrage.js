@@ -83,7 +83,7 @@
 
     if (id === "firma" || id === "messe") {
       var q = withDrinks(firmaBase, id === "messe" ? "Messe im Firmenevent-Rahmen" : "Firmenevent");
-      if (id === "messe") q.note = "Ein eigenes Messe-Paket steht auf der Live-Seite nicht. " + q.note;
+      if (id === "messe") q.note = "Messe: Bar-Ape am Messestand, Personal, Ausschank. Kalkulation wie beim Firmenevent. " + q.note;
       return q;
     }
     if (id === "weihnachten-firma") return withDrinks(firmaBase, "Weihnachtsfeier Firma");
@@ -100,7 +100,7 @@
     if (id === "privat" || id === "hochzeit" || id === "geburtstag") {
       return {
         text: "ab 390 €",
-        note: "Privates Fest (Geburtstag, Hochzeit, Gartenparty) ab 390 € laut Startseite. Dauer und Getränke stehen dort nicht als feste Stufen – der Endpreis kommt im Angebot. Anfahrt bis 30 km inklusive."
+        note: "Privates Fest ab 390 €. Getränke stellen wir nach euren Wünschen zusammen – den Endpreis bekommt ihr im Angebot. Anfahrt bis 30 km inklusive."
       };
     }
     if (id === "jga") {
@@ -130,13 +130,13 @@
     if (id === "wagyu-17") {
       return {
         text: g > 0 ? euro(390 * g) : "390 € p. P.",
-        note: "Wagyu × Champagner, Do 17.12.2026, InfoTurm Stuttgart, Champagner, 390 € pro Person. Ticketpreis laut Startseite, hier nur als Orientierung."
+        note: "Wagyu × Champagner, Do 17.12.2026 im InfoTurm Stuttgart, Champagner, 390 € pro Person. Unverbindlicher Richtpreis."
       };
     }
     if (id === "wagyu-18") {
       return {
         text: g > 0 ? euro(350 * g) : "350 € p. P.",
-        note: "Wagyu × Champagner, Fr 18.12.2026, InfoTurm Stuttgart, Champagner & Schaumwein, 350 € pro Person. Ticketpreis laut Startseite, hier nur als Orientierung."
+        note: "Wagyu × Champagner, Fr 18.12.2026 im InfoTurm Stuttgart, Champagner und Schaumwein, 350 € pro Person. Unverbindlicher Richtpreis."
       };
     }
     return { text: "–", note: "Zuerst den Anlass wählen." };
