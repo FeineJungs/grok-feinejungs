@@ -1,0 +1,183 @@
+/* Wagyu-Abschnitt (#erlebnisse) im Stil von wagyuxchampagne.com – nur Klassen .wx-*, sonst nichts auf der Seite betroffen. */
+@font-face{font-family:"Wagyu";src:url("/grok-feinejungs/wagyu/fonts/Wagyu-Fuenf-Klar-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/grok-feinejungs/wagyu/fonts/Manrope-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/grok-feinejungs/wagyu/fonts/Manrope-Semibold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/grok-feinejungs/wagyu/fonts/Manrope-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+
+.wx-event{--wx-aubergine:#46162c;--wx-cream:#fef5e3;--wx-coral:#f04142;--wx-ink:#290b18;--wx-line:rgba(254,245,227,.43);
+  --wx-serif:"Wagyu",Georgia,serif;--wx-sans:"Manrope",Arial,sans-serif;
+  background:var(--wx-aubergine);color:var(--wx-cream);font-family:var(--wx-sans);-webkit-font-smoothing:antialiased;
+  padding:0 clamp(20px,4.2vw,56px);overflow:hidden}
+.wx-event *{box-sizing:border-box}
+.wx-top,.wx-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.wx-top{min-height:86px}
+.wx-wordmark{font-family:var(--wx-serif);font-weight:500;font-size:clamp(20px,1.9vw,27px);line-height:1;letter-spacing:-.04em;white-space:nowrap}
+.wx-cross{color:var(--wx-coral);display:inline-block;font-size:1.25em;line-height:.8;margin:0 .12em}
+.wx-label,.wx-bottom,.wx-eyebrow,.wx-facts span,.wx-prices span,.wx-caption{font-size:10px;font-weight:700;letter-spacing:.12em;line-height:1.45}
+.wx-grid{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.wx-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:64px 28px 60px 0;position:relative;z-index:1}
+.wx-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:clamp(32px,4vw,56px)}
+.wx-diamond{width:7px;height:7px;flex:0 0 7px;background:var(--wx-coral);transform:rotate(45deg)}
+.wx-event h2{margin:0;font-family:var(--wx-serif)!important;font-weight:500;font-size:clamp(60px,7vw,108px);line-height:.95;letter-spacing:-.055em!important;color:var(--wx-cream)}
+.wx-event h2 em{font-style:normal;color:var(--wx-coral)}
+/* Die Seite färbt Punkte in Überschriften orange (Regel in einer CSS-Ebene mit !important) – hier per Textfüllfarbe überschrieben. */
+.wx-event h2{-webkit-text-fill-color:var(--wx-cream)}
+.wx-event h2 em{-webkit-text-fill-color:var(--wx-coral)}
+.wx-desc{max-width:430px;margin:28px 0 30px;font-size:clamp(15px,1.15vw,17px);line-height:1.75}
+.wx-prices{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:460px;border-top:1px solid var(--wx-line);margin-bottom:28px}
+.wx-prices>div{display:flex;flex-direction:column;gap:6px;padding:16px 16px 16px 0;border-bottom:1px solid var(--wx-line)}
+.wx-prices>div+div{padding-left:18px;border-left:1px solid var(--wx-line)}
+.wx-prices span{opacity:.74}
+.wx-prices strong{font-family:var(--wx-serif);font-weight:500;font-size:34px;line-height:1;letter-spacing:-.03em}
+.wx-prices small{font-size:12px;font-weight:600}
+.wx-actions{display:flex;flex-wrap:wrap;gap:12px}
+.wx-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:40px;min-height:62px;padding:0 22px;border:1px solid var(--wx-coral);
+  background:var(--wx-coral);color:var(--wx-ink);font-family:var(--wx-sans);font-size:15px;font-weight:700;letter-spacing:0;cursor:pointer;
+  transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.wx-btn:hover{background:var(--wx-cream);border-color:var(--wx-cream);color:var(--wx-aubergine);transform:translateY(-3px)}
+.wx-btn-ghost{background:transparent;border-color:var(--wx-line);color:var(--wx-cream)}
+.wx-btn-ghost:hover{background:var(--wx-cream);border-color:var(--wx-cream);color:var(--wx-aubergine)}
+.wx-btn:focus-visible,.wx-bottom a:focus-visible{outline:3px solid var(--wx-cream);outline-offset:4px}
+.wx-note{display:block;max-width:440px;margin-top:16px;font-size:12px;line-height:1.6;opacity:.8}
+.wx-facts{display:flex;gap:clamp(28px,4vw,62px);margin-top:44px}
+.wx-facts div{display:flex;flex-direction:column;gap:8px}
+.wx-facts span{font-size:9px;letter-spacing:.14em;opacity:.74}
+.wx-facts strong{font-size:12px;font-weight:600}
+.wx-art{position:relative;align-self:stretch;min-height:640px;isolation:isolate}
+.wx-shapes{position:absolute;inset:0;width:100%;height:100%;display:block}
+.wx-field{position:absolute;left:50%;top:36%;width:72%;max-width:500px;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:46% 54% 51% 49%/46% 45% 55% 54%;background:var(--wx-aubergine)}
+.wx-mark{position:absolute;left:50%;top:36%;width:58%;max-width:400px;height:auto;transform:translate(-50%,-50%);display:block}
+.wx-caption{position:absolute;top:69%;left:50%;width:max-content;transform:translateX(-50%);letter-spacing:.18em}
+.wx-bottom{min-height:62px;border-top:1px solid var(--wx-line)}
+.wx-bottom a{display:inline-flex;align-items:center;gap:8px;padding:16px 0;color:inherit;text-decoration:none}
+.wx-bottom a:hover{opacity:.7}
+
+@media (max-width:900px){
+  .wx-grid{min-height:560px}
+  .wx-art{min-height:560px}
+  .wx-copy{padding:52px 16px 48px 0}
+  .wx-event h2{font-size:clamp(50px,8vw,72px)}
+  .wx-facts{flex-direction:column;gap:16px;margin-top:36px}
+  .wx-label,.wx-bottom,.wx-eyebrow,.wx-caption{font-size:11px}
+}
+@media (max-width:640px){
+  .wx-event{padding:0 20px}
+  .wx-top{min-height:66px}
+  .wx-label{display:none}
+  .wx-grid{display:flex;flex-direction:column-reverse;min-height:0}
+  .wx-art{min-height:0;height:clamp(235px,76vw,340px);margin:0 -20px}
+  .wx-mark{width:48%;max-width:260px}
+  .wx-caption{top:75%;letter-spacing:.12em}
+  .wx-copy{padding:26px 0 44px}
+  .wx-eyebrow{margin-bottom:18px}
+  .wx-event h2{font-size:clamp(54px,14vw,80px)}
+  .wx-desc{font-size:15px;margin:22px 0 24px}
+  .wx-prices strong{font-size:30px}
+  .wx-actions{flex-direction:column;align-items:stretch;width:100%}
+  .wx-btn{min-height:58px}
+  .wx-facts{flex-direction:row;gap:24px;margin-top:30px}
+  .wx-bottom{flex-wrap:wrap;gap:0 16px;padding:6px 0}
+  .wx-bottom>span:first-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){.wx-btn{transition:none}.wx-btn:hover{transform:none}}
+
+/* =====================================================================================================
+   Kaufprozess im Wagyu-Stil: Ticket-Dialog, Warenkorb/Kasse (nur mit Wagyu-Plätzen), Warte-/Danke-Fenster (#fj-wg).
+   Klassen setzt /wagyu/wagyu-theme.js. Nur Aussehen – Inhalte und Abläufe unverändert.
+   ===================================================================================================== */
+.wx-theme,html #fj-wg{--wx-aubergine:#46162c;--wx-aubergine-2:#3a1124;--wx-cream:#fef5e3;--wx-coral:#f04142;--wx-ink:#290b18;
+  --wx-line:rgba(254,245,227,.3);--wx-serif:"Wagyu",Georgia,serif;--wx-sans:"Manrope",Arial,sans-serif}
+.wx-overlay{background:rgba(41,11,24,.78)!important;backdrop-filter:blur(2px)}
+
+.wx-theme{background:var(--wx-aubergine)!important;color:var(--wx-cream)!important;border:0!important;border-radius:0!important;
+  border-top:4px solid var(--wx-coral)!important;font-family:var(--wx-sans)!important;box-shadow:0 30px 80px rgba(20,4,12,.5)!important}
+.wx-theme *{font-family:inherit}
+.wx-theme,html #fj-wg{color-scheme:dark}
+.wx-theme [data-slot=dialog-header]{text-align:left!important}
+.wx-theme [data-slot=dialog-title]{font-family:var(--wx-serif)!important;font-weight:500!important;color:var(--wx-cream)!important;
+  font-size:clamp(34px,7vw,46px)!important;line-height:1!important;letter-spacing:-.045em!important;text-align:left!important;-webkit-text-fill-color:var(--wx-cream)}
+.wx-theme>p,.wx-theme .co-form>small,.wx-theme small{color:var(--wx-cream)!important;opacity:.8}
+.wx-theme>p{font-size:15px!important;line-height:1.65!important}
+.wx-theme [data-slot=dialog-close]{color:var(--wx-cream)!important;opacity:.85}
+.wx-theme [data-slot=dialog-close]:hover{opacity:1}
+.wx-theme .sw-fields>div>span,.wx-theme .config-fields label,.wx-theme .sw-total>span{color:var(--wx-cream)!important;font-family:var(--wx-sans)!important;
+  font-size:10px!important;font-weight:700!important;letter-spacing:.12em!important}
+.wx-theme .config-fields label{opacity:1}
+
+/* Termin-Auswahl */
+.wx-theme .co-dates button{background:transparent!important;color:var(--wx-cream)!important;border:1px solid var(--wx-line)!important;border-radius:0!important;
+  font-family:var(--wx-sans)!important;font-weight:700!important;letter-spacing:.08em!important}
+.wx-theme .co-dates button:hover{border-color:var(--wx-cream)!important}
+.wx-theme .co-dates button.selected,.wx-theme .co-dates button[aria-pressed=true]{background:var(--wx-coral)!important;border-color:var(--wx-coral)!important;color:var(--wx-ink)!important}
+.wx-theme .fj-wcount{color:var(--wx-cream);opacity:.85}
+.wx-theme .fj-wcount b{color:var(--wx-cream)}
+.wx-theme .fj-wcount .low{color:var(--wx-coral)}
+
+/* Anzahl, Häkchen */
+.wx-theme .co-qty{border:1px solid var(--wx-line)!important;border-radius:0!important;background:transparent!important}
+.wx-theme .co-qty button,.wx-theme .co-qty strong{color:var(--wx-cream)!important;background:transparent!important}
+.wx-theme .co-qty button:hover{color:var(--wx-coral)!important}
+.wx-theme .sw-drinks{color:var(--wx-cream)!important;font-family:var(--wx-sans)!important}
+.wx-theme input[type=checkbox]{accent-color:var(--wx-coral)}
+.wx-theme .sw-drinks input[type=checkbox]{border-color:var(--wx-cream)!important}
+
+/* Summen */
+.wx-theme .sw-summary,.wx-theme .sw-summary>div,.wx-theme .sw-total{border-color:var(--wx-line)!important}
+.wx-theme .sw-summary span,.wx-theme .sw-summary strong{color:var(--wx-cream)!important}
+.wx-theme .sw-summary>.sw-total:first-child,.wx-theme .cart-list+.sw-summary{border-top:0!important}
+.wx-theme .sw-total strong{font-family:var(--wx-serif)!important;font-weight:500!important;color:var(--wx-coral)!important;letter-spacing:-.03em!important}
+
+/* Haupt-Button und Neben-Buttons */
+.wx-theme .fj-button{background:var(--wx-coral)!important;color:var(--wx-ink)!important;border:1px solid var(--wx-coral)!important;border-radius:0!important;
+  font-family:var(--wx-sans)!important;font-weight:700!important;letter-spacing:.06em!important;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.wx-theme .fj-button:hover:not(:disabled){background:var(--wx-cream)!important;border-color:var(--wx-cream)!important;color:var(--wx-aubergine)!important}
+.wx-theme .fj-button:disabled{opacity:.45}
+.wx-theme .cart-more button,.wx-theme .cart-back{background:transparent!important;color:var(--wx-cream)!important;border:1px solid var(--wx-line)!important;border-radius:0!important;
+  font-family:var(--wx-sans)!important;font-weight:700!important}
+.wx-theme .cart-back{border:0!important;text-decoration:underline;text-underline-offset:4px}
+.wx-theme .cart-more button{text-decoration:none!important;padding:10px 14px!important;font-size:12px!important;letter-spacing:.04em!important}
+.wx-theme .cart-more button:hover{border-color:var(--wx-cream)!important}
+
+/* Warenkorb-Liste */
+.wx-theme .cart-list,.wx-theme .cart-item{border-color:var(--wx-line)!important;background:transparent!important}
+.wx-theme .cart-item strong,.wx-theme .cart-item small,.wx-theme .cart-price{color:var(--wx-cream)!important}
+.wx-theme .cart-item-text strong{font-family:var(--wx-serif)!important;font-weight:500!important;font-size:20px!important;letter-spacing:-.02em!important}
+.wx-theme .cart-remove{color:var(--wx-cream)!important;background:transparent!important;border:1px solid var(--wx-line)!important;border-radius:0!important;opacity:.85}
+.wx-theme .cart-remove:hover{color:var(--wx-coral)!important;opacity:1}
+
+/* Kassenformular */
+.wx-theme input[type=text],.wx-theme input[type=email],.wx-theme input[type=tel]{background:rgba(254,245,227,.06)!important;color:var(--wx-cream)!important;
+  border:1px solid var(--wx-line)!important;border-radius:0!important;font-family:var(--wx-sans)!important;-webkit-text-fill-color:var(--wx-cream)}
+.wx-theme input::placeholder{color:rgba(254,245,227,.45)!important;-webkit-text-fill-color:rgba(254,245,227,.45)}
+.wx-theme input[type=text]:focus,.wx-theme input[type=email]:focus,.wx-theme input[type=tel]:focus{outline:none!important;border-color:var(--wx-coral)!important;box-shadow:0 0 0 1px var(--wx-coral)!important}
+.wx-theme input:-webkit-autofill{-webkit-box-shadow:0 0 0 40px var(--wx-aubergine-2) inset!important;-webkit-text-fill-color:var(--wx-cream)!important}
+.wx-theme .fj-voucher button{background:var(--wx-cream)!important;color:var(--wx-aubergine)!important;font-family:var(--wx-sans)!important;font-weight:700!important}
+.wx-theme .cart-agb,.wx-theme .cart-agb span{color:var(--wx-cream)!important}
+.wx-theme a,.wx-theme .link-button{color:var(--wx-cream)!important;text-decoration:underline!important;text-decoration-color:var(--wx-coral)!important;text-underline-offset:3px}
+.wx-theme :focus-visible{outline:2px solid var(--wx-cream)!important;outline-offset:3px}
+
+/* Warte-, Hinweis- und Danke-Fenster der Wagyu-Kasse */
+html #fj-wg{background:rgba(41,11,24,.78);font-family:var(--wx-sans)}
+html #fj-wg .b{background:var(--wx-aubergine);color:var(--wx-cream);border-top:4px solid var(--wx-coral);box-shadow:0 30px 80px rgba(20,4,12,.5)}
+html #fj-wg .k{color:var(--wx-cream);opacity:.75;font-weight:700;letter-spacing:.12em}
+html #fj-wg h2{font-family:var(--wx-serif);font-weight:500;font-size:40px;line-height:1;letter-spacing:-.045em;color:var(--wx-cream)}
+html #fj-wg h2 i{color:var(--wx-coral)}
+html #fj-wg p{color:var(--wx-cream)}
+html #fj-wg .m{color:var(--wx-cream);opacity:.75}
+html #fj-wg a{color:var(--wx-cream);text-decoration-color:var(--wx-coral);text-underline-offset:3px}
+html #fj-wg .x{color:var(--wx-cream)}
+html #fj-wg .btn{background:var(--wx-coral);color:var(--wx-ink);font:700 13px var(--wx-sans);letter-spacing:.06em;transition:background .2s ease,color .2s ease}
+html #fj-wg .btn:hover{background:var(--wx-cream);color:var(--wx-aubergine)}
+html #fj-wg .btn.s{background:var(--wx-cream);color:var(--wx-aubergine)}
+html #fj-wg .btn.s:hover{background:var(--wx-coral);color:var(--wx-ink)}
+html #fj-wg .btn.g{background:transparent;color:var(--wx-cream);border:1px solid var(--wx-line)}
+html #fj-wg .btn.g:hover{border-color:var(--wx-cream)}
+html #fj-wg .sp{border-color:var(--wx-line);border-top-color:var(--wx-coral)}
+
+/* KI-Hinweis zum Logo */
+.wx-event .wx-note.wx-ai{margin-top:6px;opacity:.6}
+
+/* Eigene Eventseite feinejungs.de/wagyu (public/wagyu.html, Klasse am <html>):
+   nur Kopfzeile, Abschnitt „Erlebnisse“ (Wagyu + Gutscheine) und Fußbereich. */
+html.fj-wagyu-page main#inhalt>section:not(#erlebnisse){display:none!important}
+html.fj-wagyu-page #erlebnisse{margin-top:clamp(24px,4vw,56px)!important;padding-top:0!important}
